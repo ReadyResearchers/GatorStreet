@@ -1,1 +1,1 @@
-# Get-rich-quick-using-Machine-learning-in-the-stock-market
+*Get rich quick, using Machine learning in the stock market*
