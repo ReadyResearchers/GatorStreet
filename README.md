@@ -6,7 +6,6 @@ How do you get rich? Some people gamble, some people just work hard. But what if
 
 ## Tech Detail 
 
-
 For this demo, I will be using `yfinance` to gather data and I will be using `pyplot` to graph my data in a form of a line graph and produce a graph. Since both `yfinance` and `pyplt` are well known libaries for graphing and gathing data from stocks websites. My goal for this demo is to produce something. For instance if I look at microsoft stocks I want to be able to see past and present data. For instance, I need to be able to answer some basic questions regarding my code and the stock. 
 
 ### Tools / libraries 
