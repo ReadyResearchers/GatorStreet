@@ -51,3 +51,7 @@ def plot_r_data():
     figure.layout.update(title="time series testing data", xaxis_rangeslider_visible=True)
     st.plotly_chart(figure)
 plot_r_data()
+
+# TODO make an prediction model here
+# TODO find a package that allows python to predict X with a vertain amount of time
+# similar to prophet but different (prophet not installing)
