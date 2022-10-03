@@ -14,7 +14,30 @@ For this demo, I will be using `yfinance` to gather data and I will be using `py
  - numpy 
  - yfinance
  - pyplot
+ - fbprophet
 
+## Commands
+
+In order to run this software you will first need to install the following: `pystan`, `streamlit`, `yfinance`, `pyplot`, and `fbprophet`.
+
+command you will use: 
+
+- `pip install pystan==2.19.1.1`
+- `pip install yfinance`
+- `pip install pyplot`
+- `pip install streamlit`
+- `pip install Prophet`
+
+Note that we are installing a older version of pystan, because `Prophet` will not work with the newest version of `pystan`. 
+
+To run the program, please use the command below
+- `streamlit run src/example/main.py`
+
+## Output
+
+```
+img
+```
 ## Related work 
  - https://data-flair.training/blogs/stock-price-prediction-machine-learning-project-in-python/
  - https://towardsdatascience.com/predicting-future-stock-market-trends-with-python-machine-learning-2bf3f1633b3c
@@ -22,8 +45,8 @@ For this demo, I will be using `yfinance` to gather data and I will be using `py
  - https://www.dataquest.io/blog/portfolio-project-predicting-stock-prices-using-pandas-and-scikit-learn/
 ## Future Work 
 
- - Introduce machine learning and AI into the project
- - Find a way for the code to grab data by it self, and give me a list of potencial candidates
- - increase accuracy of the program
- - make it easier to use
- - produce a live graph of current data 
+ [x] Introduce machine learning and AI into the project
+ [x] Find a way for the code to grab data by it self, and give me a list of potencial candidates
+ [] increase accuracy of the program
+ [] make it easier to use
+ [x] produce a live graph of current data 
