@@ -1,13 +1,18 @@
+from operator import imod
 import streamlit as st
 import pandas as pd
 from datetime import date # https://docs.python.org/3/library/datetime.html
 
 import yfinance as yf # https://pypi.org/project/yfinance/
 
+from prophet import Prophet
+from prophet.plot import plot_plotly
 from plotly import graph_objs as go 
 
+# scikit - learn imports
 # streamlit run (file) 
 # to run the app
+# https://scikit-learn.org/stable/
 
 START = "2017-01-01"
 
@@ -15,13 +20,15 @@ Today = date.today().strftime("%Y-%m-%d") # note its a set format, looking up ye
 
 st.title("STOCKS app")
 
+# make an input str here to take in stock names
+# print("enter stock")
 stocks = ("GOOG","AAPL","ASFT","GME")
 selected_stock = st.selectbox("Select Stock", stocks)
 
 # using the st.slider to design the amount of years predicted in the future.
-x_days = st.slider("Select days for prediction (working progress)" , 1, 4) # 1 - 6 days into the future
+x_years = st.slider("Select days for prediction (working progress)" , 1, 4) # 1 - 6 days into the future
 # could use in days (most up to date)
-period = x_days * 365 # could have some math problem here 
+period = x_years * 365 # could have some math problem here 
 # TODO using what period?
 # TODO testing using (years)
 
@@ -51,6 +58,24 @@ def plot_r_data():
     figure.layout.update(title="time series testing data", xaxis_rangeslider_visible=True)
     st.plotly_chart(figure)
 plot_r_data()
+
+data_train = data[["Date","Close"]]
+data_train = data_train.rename(columns={"Date": "ds", "Close": "y"})
+m = Prophet()
+m.fit(data_train)
+
+future_data = m.make_future_dataframe(periods = period) # in years
+
+prediction = m.predict(future_data)
+
+
+st.subheader("Future data")
+st.write(prediction.tail())
+
+st.write('making prediction')
+fig1 = plot_plotly(m, prediction)
+st.plotly_chart(fig1)
+
 
 # TODO make an prediction model here
 # TODO find a package that allows python to predict X with a vertain amount of time
