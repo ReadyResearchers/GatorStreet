@@ -16,6 +16,9 @@ For this demo, I will be using `yfinance` to gather data and I will be using `py
  - pyplot
  - fbprophet
 
+How will they work within your code:
+
+
 ## Commands
 
 In order to run this software you will first need to install the following: `pystan`, `streamlit`, `yfinance`, `pyplot`, and `fbprophet`.
@@ -45,8 +48,9 @@ img
  - https://www.dataquest.io/blog/portfolio-project-predicting-stock-prices-using-pandas-and-scikit-learn/
 ## Future Work 
 
- [x] Introduce machine learning and AI into the project
- [x] Find a way for the code to grab data by it self, and give me a list of potencial candidates
- [] increase accuracy of the program
- [] make it easier to use
- [x] produce a live graph of current data 
+- [x] Introduce machine learning and AI into the project
+- [x] Find a way for the code to grab data by it self, and give me a list of potencial candidates
+- [] increase accuracy of the program
+- [X] make it easier to use
+- [x] produce a live graph of current data 
+- [] make it more interactive, allow the user toenter a selective stock instead of it being hard coded. 
