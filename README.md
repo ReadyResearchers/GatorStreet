@@ -1,4 +1,4 @@
-# Get rich quick, using AI
+# GitRich: a user-friendly machine learning predictive tool for analyzing stock trends
 
 ## Intro
 
