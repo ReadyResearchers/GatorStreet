@@ -1,5 +1,9 @@
 # GitRich: a user-friendly machine learning predictive tool for analyzing stock trends
 
+## Abstraction
+
+GitRich is a user-friendly tool designed for motivated people who want to learn more about stocks. While using this tool, the user will quickly adapt and get used to how the stock market works. The GitRich tool will achieve that by using machine learning to analyze past stock data and provide the user with up-to-date data in an easy-to-digest manner.  
+
 ## Intro
 
 How do you get rich? Some people gamble, some people just work hard. But what if I tell you that you can make money by getting into stocks. Would you have believe me? For my project, I decided to explore the combination of AI technology with the stock market. My goal is to create a tool that can predict the next big thing before it happen. I can achieve that by studying old data and current data of past stocks prices to predict the next market. 
