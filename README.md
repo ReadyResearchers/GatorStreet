@@ -8,11 +8,15 @@ GitRich is a user-friendly tool designed for motivated people who want to learn 
 
 How do you get rich? Some people gamble, some people just work hard. But what if I tell you that you can make money by getting into stocks. Would you have believe me? For my project, I decided to explore the combination of AI technology with the stock market. My goal is to create a tool that can predict the next big thing before it happen. I can achieve that by studying old data and current data of past stocks prices to predict the next market. 
 
-## Tech Detail 
+## Implementation
+
+TODO
+
+## Tech Detail TODO (better verison)
 
 For this demo, I will be using `yfinance` to gather data and I will be using `pyplot` to graph my data in a form of a line graph and produce a graph. Since both `yfinance` and `pyplt` are well known libaries for graphing and gathing data from stocks websites. My goal for this demo is to produce something. For instance if I look at microsoft stocks I want to be able to see past and present data. For instance, I need to be able to answer some basic questions regarding my code and the stock. 
 
-### Tools / libraries 
+### Tools / libraries (TODO Delete certain libaries and tools)
  - pandas 
  - streamlit 
  - numpy 
