@@ -8,7 +8,7 @@ from datetime import date
 
 # import different files: 
 import stock_selector
-import prediction
+import key
 
 
 # Global variables: 
@@ -20,7 +20,7 @@ PAGES = [ # set different tabs and pages for later use
     'Stock Selector',
     # 'Data Explorer',
     'Prediction',
-    'Definitions / Key'
+    'Key'
 ]
 
 
@@ -40,15 +40,17 @@ def run():
     #     st.sidebar.write("TEST DATA TEST DATATEST DATATEST DATATEST DATATEST DATATEST DATATEST DATATEST DATATEST DATATEST DATATEST DATATEST DATATEST DATA")
     #     # data_explorer.data()
     if page == 'Stock Selector': 
-        st.sidebar.write("TEST1")
+        st.sidebar.write("This page is where users could select what stock they would like to look at. At the same time explore different types of data.")
         # stock_selector.RUN_THIS()
+        st.title("Stock Selector")
         ticker = stock_selector.selected_stock()
         data = stock_selector.loading_data(ticker)
         stock_selector.graphs(data)
         stock_selector.state(data)
 
     elif page == 'Prediction':
-        st.sidebar.write("TEST1")
+        st.sidebar.write("The prediction page locates the prediction feature of the code project. Please note that the project is a simulation, don't invest based on what you see in this app.")
+        st.title("Prediction Time")
         ticker = stock_selector.selected_stock()
         stock_selector.predict(ticker)
         # data = stock_selector.loading_data(ticker)
@@ -58,8 +60,10 @@ def run():
         # stock_selector.predict(period)
 
     else:
-        st.sidebar.write("TEST2")
+        st.sidebar.write("This page locates all the vocab you will need to learn before you really get going with the stock market.")
+        st.title("Important Stock Trading Terms")
 
+        key.key() # working
 
 if __name__ == "__main__":
     if st._is_running_with_streamlit:

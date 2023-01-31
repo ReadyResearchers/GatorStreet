@@ -38,3 +38,10 @@ def testing_data():
     """Test to see if data is empty or not."""
     data = ss.get_data()
     assert data != None
+
+def testing_prediction_output():
+    """Testing to see if prediction functions returns anything."""
+    ticker = "APPL"
+    graphs = ss.predict(ticker)
+    assert graphs != None
+

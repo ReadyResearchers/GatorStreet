@@ -25,6 +25,7 @@ def get_data():
 
 def selected_stock():
     """Getting stock name here."""
+    st.title("STOCKS")
     data = get_data()
     data = data.drop_duplicates(subset="Name", keep="first")
 
@@ -48,13 +49,13 @@ def graphs(data):
     figure = go.Figure()
 
     figure.add_trace(go.Scatter(x=data['Date'], y=data['Open'], name = 'stock_open'))
-    figure.layout.update(title="TITLE", xaxis_rangeslider_visible=True)
+    figure.layout.update(title="Stock's Opening price", xaxis_rangeslider_visible=True)
     st.plotly_chart(figure)
 
 def state(data):
     figure = go.Figure()
     figure.add_trace(go.Scatter(x=data['Date'], y=data['Close'], name = 'stock_close'))
-    figure.layout.update(title="TITLE", xaxis_rangeslider_visible=True)
+    figure.layout.update(title="Stock's Closing price", xaxis_rangeslider_visible=True)
 
     st.plotly_chart(figure)
 
