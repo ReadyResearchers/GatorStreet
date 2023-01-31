@@ -17,9 +17,6 @@ from prophet.plot import plot_plotly
 START_DATE = "2015-01-01"
 TODAY = date.today().strftime("%Y-%m-%d")
 
-
-
-
 @st.cache
 def get_data():
     print("getting stock data here")
@@ -69,7 +66,6 @@ def loading_data(symbol):
     return data
 
 
-# predict_data = selected_stock()
 # @st.cache
 def predict(ticker):
     data = loading_data(ticker)
