@@ -11,8 +11,6 @@ from prophet import Prophet
 from prophet.plot import plot_plotly
 
 
-
-
 # global start data and today
 START_DATE = "2015-01-01"
 TODAY = date.today().strftime("%Y-%m-%d")
@@ -23,9 +21,10 @@ def get_data():
     path = 'data/stock.csv'
     return pd.read_csv(path, low_memory=False)
 
+# @st.cache()
 def selected_stock():
     """Getting stock name here."""
-    st.title("STOCKS")
+    # st.title("STOCKS")
     data = get_data()
     data = data.drop_duplicates(subset="Name", keep="first")
 
