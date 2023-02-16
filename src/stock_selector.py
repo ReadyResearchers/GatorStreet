@@ -12,7 +12,7 @@ from prophet.plot import plot_plotly
 
 
 # global start data and today
-START_DATE = "2015-01-01"
+# START_DATE = "2015-01-01"
 TODAY = date.today().strftime("%Y-%m-%d")
 
 @st.cache
@@ -21,7 +21,7 @@ def get_data():
     path = 'data/stock.csv'
     return pd.read_csv(path, low_memory=False)
 
-# @st.cache()
+# @st.cache
 def selected_stock():
     """Getting stock name here."""
     # st.title("STOCKS")
@@ -61,9 +61,10 @@ def state(data):
 
 @st.cache
 def loading_data(symbol):
-    data = yf.download(symbol)
+    # declaring a data variable for later. 
+    data = yf.download(symbol) # making the variable here.
     data.reset_index(inplace=True)
-    return data
+    return data # returning the data variable.
 
 
 # @st.cache

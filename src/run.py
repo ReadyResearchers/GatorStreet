@@ -13,7 +13,7 @@ import key
 
 # Global variables: 
 
-START_DATE = "2015-01-01"
+# START_DATE = "2015-01-01"
 TODAY = date.today().strftime("%Y-%m-%d")
 
 PAGES = [ # set different tabs and pages for later use
