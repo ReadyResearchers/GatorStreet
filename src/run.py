@@ -9,7 +9,9 @@ from datetime import date
 # import different files: 
 import stock_selector
 import key
-
+import experiment
+import predict
+import graph_data
 
 # Global variables: 
 
@@ -18,9 +20,10 @@ TODAY = date.today().strftime("%Y-%m-%d")
 
 PAGES = [ # set different tabs and pages for later use
     'Stock Selector',
-    # 'Data Explorer',
+    'Data Explorer',
     'Prediction',
-    'Key'
+    'Key',
+    'Experiments'
 ]
 
 
@@ -36,28 +39,34 @@ def run():
     else:
         page=st.sidebar.radio('Data', PAGES, index = 0) # when loading where you will end up
     
-    # if page == 'Data Explorer': 
-    #     st.sidebar.write("TEST DATA TEST DATATEST DATATEST DATATEST DATATEST DATATEST DATATEST DATATEST DATATEST DATATEST DATATEST DATATEST DATATEST DATA")
-    #     # data_explorer.data()
     if page == 'Stock Selector': 
         st.sidebar.write("This page is where users could select what stock they would like to look at. At the same time explore different types of data.")
-        # stock_selector.RUN_THIS()
         st.title("Stock Selector")
         ticker = stock_selector.selected_stock()
+        st.write("You have selected this ",ticker, " stock")
+
+    elif page == 'Data Explorer':
+        st.sidebar.write("EHSUEHUFUFH")
+        st.title("Your data")
+        ticker = stock_selector.selected_stock()
         data = stock_selector.loading_data(ticker)
-        stock_selector.graphs(data)
-        stock_selector.state(data)
+        graph_data.data_graphs(data)
+
+
+
+
+
 
     elif page == 'Prediction':
         st.sidebar.write("The prediction page locates the prediction feature of the code project. Please note that the project is a simulation, don't invest based on what you see in this app.")
         st.title("Prediction Time")
         ticker = stock_selector.selected_stock()
-        stock_selector.predict(ticker)
-        # data = stock_selector.loading_data(ticker)
-        # stock_selector.predict(data)
-        # n_years = st.slider("", 1, 5)
-        # period = n_years * 365
-        # stock_selector.predict(period)
+        predict.predict(ticker)
+
+    elif page == 'Experiments':
+        st.title("Experiments")
+        data = stock_selector.selected_stock()
+        experiment.data_testing(data)
 
     else:
         st.sidebar.write("This page locates all the vocab you will need to learn before you really get going with the stock market.")
