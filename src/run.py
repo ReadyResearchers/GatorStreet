@@ -43,7 +43,7 @@ def run():
         st.sidebar.write("This page is where users could select what stock they would like to look at. At the same time explore different types of data.")
         st.title("Stock Selector")
         ticker = stock_selector.selected_stock()
-        st.write("You have selected this ",ticker, " stock")
+        st.write("You have selected this ", ticker, " as your stock for this **simulation**")
 
     elif page == 'Data Explorer':
         st.sidebar.write("EHSUEHUFUFH")
