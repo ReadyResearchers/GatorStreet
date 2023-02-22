@@ -31,13 +31,13 @@ def graph_Open_price(data):
     # st.write("making graphs here")
 
     figure = go.Figure()
-    figure.add_trace(go.Scatter(x=data['Date'], y=data['Open'], name = 'stock_open'))
+    figure.add_trace(go.Scatter(x=data['Date'], y=data['Open'], name = 'stock open'))
     figure.layout.update(title="Opening price", xaxis_rangeslider_visible=True)
     st.plotly_chart(figure)
 
 def graph_Close_price(data):
     figure = go.Figure()
-    figure.add_trace(go.Scatter(x=data['Open'], y=data['Close'], name = 'stock_close'))
+    figure.add_trace(go.Scatter(x=data['Date'], y=data['Close'], name = 'stock closeing price'))
     figure.layout.update(title="Closing price", xaxis_rangeslider_visible=True)
 
     st.plotly_chart(figure)

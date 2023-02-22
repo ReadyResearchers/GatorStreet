@@ -52,11 +52,6 @@ def run():
         data = stock_selector.loading_data(ticker)
         graph_data.data_graphs(data)
 
-
-
-
-
-
     elif page == 'Prediction':
         st.sidebar.write("The prediction page locates the prediction feature of the code project. Please note that the project is a simulation, don't invest based on what you see in this app.")
         st.title("Prediction Time")
