@@ -12,7 +12,7 @@ from prophet.plot import plot_plotly
 
 
 # global start data and today
-# START_DATE = "2015-01-01"
+START_DATE = "2015-01-01"
 # TODAY = date.today().strftime("%Y-%m-%d")
 
 @st.cache
@@ -45,6 +45,6 @@ def selected_stock():
 @st.cache
 def loading_data(symbol):
     # declaring a data variable for later. 
-    data = yf.download(symbol) # making the variable here.
+    data = yf.download(symbol, start=START_DATE) # making the variable here.
     data.reset_index(inplace=True)
     return data # returning the data variable.

@@ -13,15 +13,18 @@ def data_graphs(data):
     tab1, tab2, tab3, tab4= st.tabs(["  Open Price  ", "  Close Price  ", "  High  ", "  Low  "])
 
     with tab1: 
-        st.markdown("testingsss")
         graph_Open_price(data)
-        st.markdown("testing")
+        st.write("This graph shows the performance of the daily opening prices of a stock over time.")
     with tab2:
         graph_Close_price(data)
+        st.write("This graph shows the performance graph of the daily closing prices of a stock over time.")
+
     with tab3:
         graph_High(data)
+        st.write("This graph shows the performance graph of the daily high prices of a stock over time.")
     with tab4:
         graph_Low(data)
+        st.write("This graph shows the performance graph of the daily low prices of a stock over time.")
         
 
 # line=dict(color="#ffe476") use this to change colors
@@ -53,6 +56,6 @@ def graph_Low(data):
 
     figure = go.Figure()
 
-    figure.add_trace(go.Scatter(x=data['High'], y=data['Low'], name = 'stock_low'))
+    figure.add_trace(go.Scatter(x=data['Date'], y=data['Low'], name = 'stock_low'))
     figure.layout.update(title="Low Price", xaxis_rangeslider_visible=True)
     st.plotly_chart(figure)  

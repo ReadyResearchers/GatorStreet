@@ -9,13 +9,10 @@ def predict(ticker):
     tab1, tab2 = st.tabs([" Prediction  ", "  Components  "])
     data = stock_selector.loading_data(ticker)
     
-    # st.write(data)
-    # df_train = data[['Date', 'Close']]
-    # df_train = df_train.rename(columns={"Date": "ds", "Close": "y"})    
     with tab1:
+        st.subheader("Your Prediction")
         df_train = data[['Date', 'Close']]
-        df_train = df_train.rename(columns={"Date": "ds", "Close": "y"})
-
+        df_train = df_train.rename(columns={"Date": "ds", "Close": "y"})   # Rename columns to "ds" and "y"    
         m = Prophet()
         m.fit(df_train)
 
