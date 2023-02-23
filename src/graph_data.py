@@ -22,6 +22,7 @@ def data_graphs(data):
     with tab3:
         graph_High(data)
         st.write("This graph shows the performance graph of the daily high prices of a stock over time.")
+        
     with tab4:
         graph_Low(data)
         st.write("This graph shows the performance graph of the daily low prices of a stock over time.")

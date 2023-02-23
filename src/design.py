@@ -10,6 +10,7 @@ import design
 
 
 colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet", "red", "orange"]
+image_list = ["img/image1.jpg", "img/image2.jpg", "img/image3.jpg", "img/image4.jpg"] # List of image filenames
 
 def Stock_selector_design():
         st.sidebar.write("This page is where users could select what stock they would like to look at. At the same time explore different types of data.")
@@ -25,16 +26,20 @@ def Stock_selector_design():
         articles = news.get_stock_news(ticker)
 
         with col1:
+            st.image(image_list[0], caption=f"") 
             font_Stock_selector_col(articles, 0)
             st.write("\n\n")
+            st.image(image_list[1], caption=f"") 
             font_Stock_selector_col(articles, 1)
         with col2: 
+            st.image(image_list[2], caption=f"") 
             font_Stock_selector_col(articles,2)
             st.write("\n\n")
+            st.image(image_list[3], caption=f"") 
             font_Stock_selector_col(articles,3)
 
 def Data_Explorer_design():
-    st.sidebar.write("EHSUEHUFUFH") 
+    st.sidebar.write("The Data explorer option allows users to take a closer look at the data used for the prediction feature of the app.") 
     st.title("Your data")
     ticker = stock_selector.selected_stock()
     data = stock_selector.loading_data(ticker)
