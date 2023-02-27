@@ -6,7 +6,6 @@ import experiment
 import predict
 import graph_data
 import news
-import design
 
 
 colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet", "red", "orange"]
@@ -54,7 +53,7 @@ def Prediction_design():
 def Experiment_design():
     st.title("Experiments")
     data = stock_selector.selected_stock()
-    experiment.data_testing(data)
+    experiment.experiments(data)
 
 def Key_design():
     st.sidebar.write("This page locates all the vocab you will need to learn before you really get going with the stock market.")
