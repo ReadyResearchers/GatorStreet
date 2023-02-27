@@ -60,3 +60,13 @@ def graph_Low(data):
     figure.add_trace(go.Scatter(x=data['Date'], y=data['Low'], name = 'stock_low'))
     figure.layout.update(title="Low Price", xaxis_rangeslider_visible=True)
     st.plotly_chart(figure)  
+
+def plot_accuracy_rate_over_time(date, accuracy_rate):
+    trace = go.Scatter(x=date, y=accuracy_rate, mode="lines")
+    layout = go.Layout(
+        title="Accuracy Rate Over Time",
+        xaxis=dict(title="Date"),
+        yaxis=dict(title="Accuracy Rate (%)"),
+    )
+    fig = go.Figure(data=[trace], layout=layout)
+    return fig

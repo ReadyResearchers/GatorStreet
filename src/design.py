@@ -6,7 +6,7 @@ import experiment
 import predict
 import graph_data
 import news
-
+import experiment_1
 
 # colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet", "red", "orange"]
 image_list = ["img/image1.jpg", "img/image2.jpg", "img/image3.jpg", "img/image4.jpg"] # List of image filenames
@@ -53,8 +53,30 @@ def Prediction_design():
 def Experiment_design():
     st.title("Experiments")
     data = stock_selector.selected_stock()
-    # experiment.experiments(data)
-    st.write("current the experiment for ", data, "is a working progress.") 
+
+    start_date = "2015-01-01"
+    end_date = "2022-01-01"
+    test_size = .2
+
+    tab1, tab2 = st.tabs(["   Experiment: Accuracy and Error rate plot   ", "   Experiment: Different Hyperparameters   "])
+
+    with tab1:
+        experiment_1.experiment_accuracy_and_error_rate_plot(data, start_date, end_date, test_size)
+    with tab2:
+        # Define default hyperparameters
+        DEFAULT_N_PERIODS = 30
+        # DEFAULT_SEASONALITY_MODE = 'multiplicative'
+
+        # Define sidebar widgets
+        n_periods = st.sidebar.slider('Number of periods to forecast:', 1, 365, DEFAULT_N_PERIODS)
+        seasonality_mode = st.sidebar.selectbox('Seasonality mode:', ['additive', 'multiplicative'], index=1)
+
+        experiment_1.experiment_with_different_hyperparameters(data, start_date, end_date, test_size, n_periods, seasonality_mode)
+
+        # experiment_1.experiment_precision_and_recall(data, start_date, end_date, test_size)
+    # graph_data.testing_graph(data)
+    # new_experiment.experiment_error(data, start_date, end_date, test_size)
+    
 def Key_design():
     st.sidebar.write("This page locates all the vocab you will need to learn before you really get going with the stock market.")
     st.title("Important Stock Trading Terms")
