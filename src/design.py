@@ -8,7 +8,7 @@ import graph_data
 import news
 
 
-colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet", "red", "orange"]
+# colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet", "red", "orange"]
 image_list = ["img/image1.jpg", "img/image2.jpg", "img/image3.jpg", "img/image4.jpg"] # List of image filenames
 
 def Stock_selector_design():
@@ -53,8 +53,8 @@ def Prediction_design():
 def Experiment_design():
     st.title("Experiments")
     data = stock_selector.selected_stock()
-    experiment.experiments(data)
-
+    # experiment.experiments(data)
+    st.write("current the experiment for ", data, "is a working progress.") 
 def Key_design():
     st.sidebar.write("This page locates all the vocab you will need to learn before you really get going with the stock market.")
     st.title("Important Stock Trading Terms")
