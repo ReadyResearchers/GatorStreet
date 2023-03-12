@@ -17,11 +17,10 @@ START_DATE = "2015-01-01"
 
 @st.cache
 def get_data():
-    print("getting stock data here")
+    # print("getting stock data here")
     path = 'data/stock.csv'
     return pd.read_csv(path, low_memory=False)
 
-# @st.cache
 def selected_stock():
     """Getting stock name here."""
     # st.title("STOCKS")

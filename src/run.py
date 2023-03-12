@@ -1,7 +1,6 @@
 # to run this file use command "streamlit run run.py"
 # here is the main file for my comp
 
-
 #imports: 
 import streamlit as st
 from datetime import date
