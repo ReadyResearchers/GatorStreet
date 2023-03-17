@@ -1,4 +1,4 @@
-# GitRich: a user-friendly machine learning predictive tool for analyzing stock trends
+# GatorStreet: The User-Friendly Machine Learning Tool for Mastering the Stock Market
 
 ## Abstraction
 
