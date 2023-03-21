@@ -78,7 +78,7 @@ def experiment_with_different_hyperparameters(ticker, start_date, end_date, test
     forecast = m.predict(future)
 
     # Calculate error rate and accuracy rate
-    error_rate = np.mean(np.abs((test_data['Close'].values - forecast['yhat'][-len(test_data):].values) / test_data['Close'].values)) * 100
+    error_rate = finding_error_rate(test_data, forecast)
     accuracy_rate = 100 - error_rate
 
     # Plot forecast and actual values
