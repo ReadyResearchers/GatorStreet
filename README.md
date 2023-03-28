@@ -2,15 +2,19 @@
 
 ## Abstraction
 
-GitRich is a user-friendly tool designed for motivated people who want to learn more about stocks. While using this tool, the user will quickly adapt and get used to how the stock market works. The GitRich tool will achieve that by using machine learning to analyze past stock data and provide the user with up-to-date data in an easy-to-digest manner.  
+GatorStreet is an open-source stock prediction tool that utilizes machine learning algorithms and artificial intelligence to provide up-to-date data on different aspects of the stock market, such as trends, volatility, and historical data. Its user-friendly web application design prioritizes simplicity and accessibility, making it an excellent resource for individuals with limited financial knowledge who want to learn and explore the stock market. In addition, the tool offers a risk-free environment for users to experiment with different investment strategies and make informed decisions about their future investment options.
 
 ## Intro
 
-How do you get rich? Some people gamble, some people just work hard. But what if I tell you that you can make money by getting into stocks. Would you have believe me? For my project, I decided to explore the combination of AI technology with the stock market. My goal is to create a tool that can predict the next big thing before it happen. I can achieve that by studying old data and current data of past stocks prices to predict the next market. 
+Are you tired of feeling overwhelmed and confused about the stock market? Do you want to learn how to make informed investment decisions but need help knowing where to start? Look no further than GatorStreet, the revolutionary educational stock sim that utilizes the power of machine learning and artificial intelligence to provide up-to-date data and insights into the complexities of the stock market.
 
-## Implementation
+GatorStreet isn't just another stock simulator - it's an innovative tool that empowers individuals with limited financial knowledge to learn and understand the stock market. Unlike traditional stock simulators that replicate the stock market, GatorStreet uses machine learning algorithms to analyze past stock data to simulate the stock market.
 
-TODO
+In a world where financial literacy is increasingly essential, GatorStreet provides a unique opportunity for individuals to learn about the stock market in a risk-free environment. Whether you're a beginner looking to learn the basics or an experienced investor looking to try new strategies, GatorStreet has something to offer. 
+
+## Installation 
+
+what do we need to install your tool:
 
 ## Tech Detail TODO (better verison)
 

@@ -12,30 +12,30 @@ import experiment
 image_list = ["img/image1.jpg", "img/image2.jpg", "img/image3.jpg", "img/image4.jpg"] # List of image filenames
 
 def Stock_selector_design():
-        st.sidebar.write("This page is where users could select what stock they would like to look at. At the same time explore different types of data.")
-        
-        st.write("<p style='font-family: Arial; font-size: 50px; color:red'> Stock News </p>", unsafe_allow_html=True)           
-        # st.write('<p style="font-size:26px; color:red;">Here is some red text</p>', unsafe_allow_html=True)
-        # st.write(f"<p style='font-family: Arial; font-size: 30px; color:#00CBF3'> You Selected: {ticker} </p>", unsafe_allow_html=True)           
-        ticker = stock_selector.selected_stock()
+    st.sidebar.write("This page is where users could select what stock they would like to look at. At the same time explore different types of data.")
+    
+    st.write("<p style='font-family: Arial; font-size: 50px; color:red'> Stock News </p>", unsafe_allow_html=True)           
+    
+    ticker = stock_selector.selected_stock()
 
-        st.write(f"<p style='font-family: Arial; font-size: 25px; color:red'> Trending News for <strong>{ticker}</strong> </p>", unsafe_allow_html=True)           
+    st.write(f"<p style='font-family: Arial; font-size: 25px; color:red'> Trending News for <strong>{ticker}</strong> </p>", unsafe_allow_html=True)           
 
-        col1, col2 = st.columns(2)
-        articles = news.get_stock_news(ticker)
+    articles = news.get_stock_news(ticker)
+    
+    num_articles = len(articles)
 
-        with col1:
-            st.image(image_list[0], caption=f"") 
-            font_Stock_selector_col(articles, 0)
-            st.write("\n\n")
-            st.image(image_list[1], caption=f"") 
-            font_Stock_selector_col(articles, 1)
-        with col2: 
-            st.image(image_list[2], caption=f"") 
-            font_Stock_selector_col(articles,2)
-            st.write("\n\n")
-            st.image(image_list[3], caption=f"") 
-            font_Stock_selector_col(articles,3)
+    if num_articles == 0:
+        st.write(f"No news found for {ticker}")
+        return
+    
+    col1, col2 = st.columns(2)
+
+    for i in range(min(num_articles, 4)):
+        article = articles[i]
+        with col1 if i % 2 == 0 else col2:
+            st.image(image_list[i], caption=f"")
+            st.write(f"{article['title']}")
+            st.markdown(f"[Read full article]({article['url']})")
 
 def Data_Explorer_design():
     st.sidebar.write("The Data explorer option allows users to take a closer look at the data used for the prediction feature of the app.") 

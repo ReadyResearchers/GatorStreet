@@ -46,11 +46,14 @@ def run():
         design.Key_design() # working
 
 if __name__ == "__main__":
-    if st._is_running_with_streamlit:
+
+    if 'loaded' not in st.session_state: 
+        st.experimental_set_query_params(page='Stock News')
         url_params = st.experimental_get_query_params()
-        if 'loaded' not in st.session_state: 
-            # if len(url_params.keys() == 0):
-            st.experimental_set_query_params(page = 'Stock News')
-            url_params = st.experimental_get_query_params()
+        if 'page' in url_params:
             st.session_state.page = PAGES.index(url_params['page'][0])
+        else:
+            st.session_state.page = 0
     run()
+
+
