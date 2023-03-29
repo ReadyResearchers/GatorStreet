@@ -10,43 +10,38 @@ Are you tired of feeling overwhelmed and confused about the stock market? Do you
 
 GatorStreet isn't just another stock simulator - it's an innovative tool that empowers individuals with limited financial knowledge to learn and understand the stock market. Unlike traditional stock simulators that replicate the stock market, GatorStreet uses machine learning algorithms to analyze past stock data to simulate the stock market.
 
-In a world where financial literacy is increasingly essential, GatorStreet provides a unique opportunity for individuals to learn about the stock market in a risk-free environment. Whether you're a beginner looking to learn the basics or an experienced investor looking to try new strategies, GatorStreet has something to offer. 
+In a world where financial literacy is increasingly essential, GatorStreet provides a unique opportunity for individuals to learn about the stock market in a risk-free environment. So whether you're a beginner looking to learn the basics or an experienced investor looking to try new strategies, GatorStreet has something to offer. 
 
 ## Installation 
 
 what do we need to install your tool:
 
-## Tech Detail TODO (better verison)
+### Setting up a Virtual Environment
+I recommend creating a virtual environment to manage dependencies. This ensures that the packages used by this project do not conflict with those of other projects.
 
-For this demo, I will be using `yfinance` to gather data and I will be using `pyplot` to graph my data in a form of a line graph and produce a graph. Since both `yfinance` and `pyplt` are well known libaries for graphing and gathing data from stocks websites. My goal for this demo is to produce something. For instance if I look at microsoft stocks I want to be able to see past and present data. For instance, I need to be able to answer some basic questions regarding my code and the stock. 
+To create a virtual environment, run the following command in your terminal:
 
-### Tools / libraries (TODO Delete certain libaries and tools)
- - pandas 
- - streamlit 
- - numpy 
- - yfinance
- - pyplot
- - fbprophet
+```python -m venv <name_of_the_environment>```
 
-How will they work within your code:
+To activate the virtual environment, run the following command:
 
+```source <name_of_the_environment>/bin/activate```
 
-## Commands
+To deactivate the virtual environment, simply run:
 
-In order to run this software you will first need to install the following: `pystan`, `streamlit`, `yfinance`, `pyplot`, and `fbprophet`.
+```deactivate```
 
-command you will use: 
+### Installing Dependencies
 
-- `pip install pystan==2.19.1.1`
-- `pip install yfinance`
-- `pip install pyplot`
-- `pip install streamlit`
-- `pip install Prophet`
+Once you have activated your virtual environment, you can install the dependencies required for this project. To do so, run the following command:
 
-Note that we are installing a older version of pystan, because `Prophet` will not work with the newest version of `pystan`. 
+```pip install -r requirements.txt```
 
-To run the program, please use the command below
-- `streamlit run src/example/main.py`
+### Running the Application
+
+To run the application locally, navigate to the src directory in your terminal and run the following command:
+
+```streamlit run main.py```
 
 ## Output
 
@@ -59,10 +54,3 @@ img
  - https://github.com/lussierc/StockSwingPredictor
  - https://www.dataquest.io/blog/portfolio-project-predicting-stock-prices-using-pandas-and-scikit-learn/
 ## Future Work 
-
-- [x] Introduce machine learning and AI into the project
-- [x] Find a way for the code to grab data by it self, and give me a list of potencial candidates
-- [] increase accuracy of the program
-- [X] make it easier to use
-- [x] produce a live graph of current data 
-- [] make it more interactive, allow the user toenter a selective stock instead of it being hard coded. 
