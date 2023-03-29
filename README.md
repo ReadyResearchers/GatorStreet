@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="img/GatorStreet_Logo.png" />
+</p>
+
 # GatorStreet: The User-Friendly Machine Learning Tool for Mastering the Stock Market
 
 ## Abstraction
