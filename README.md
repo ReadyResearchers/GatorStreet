@@ -1,4 +1,4 @@
-![MIT License badge](https://img.shields.io/github/license/ReadyResearchers/GatorStreet)
+![MIT License badge](https://img.shields.io/github/license/ReadyResearchers/GatorStreet)![files](https://img.shields.io/github/directory-file-count/ReadyResearchers/GatorStreet) ![status](https://img.shields.io/github/actions/workflow/status/ReadyResearchers/GatorStreet/main.yml)
 <p align="center">
   <img src="img/GatorStreet_Logo.png" />
 </p>
