@@ -62,34 +62,34 @@ The GatorStreet application will guide you to a user-friendly web page that is d
 
 On the GatorStreet main page, you can use the stock selector on the sidebar to switch between different stocks and view the latest news articles related to the selected stock, as shown in the images below. The first image shows the stock selector on the sidebar, and the second image shows the latest news articles related to the selected stock.
 
-- ![Stock](img/Select.png)
+![Stock](img/Select.png)
 
-- ![Stock New](img/news.png)
+![Stock New](img/news.png)
 
 ### Sidebar
 The sidebar contains buttons that allow you to access the different features of the application.
 
-- ![Side Bar](img/side_bar.png)
+![Side Bar](img/side_bar.png)
 
 
 ### Data Explorer
 
 Click the ```Data Explorer``` button on the sidebar to explore your data. This feature displays information about a stock's open/close prices, as well as the high and low price of the stock.
 
-- ![Data Explorer](img/data.png)
+![Data Explorer](img/data.png)
 
 ### Stock Performance Prediction
 
 To see the predicted performance of a selected stock, click the ```Prediction``` button on the sidebar. This feature displays a graph of the expected stock performance.
 
-- ![Prediction](img/prediction.png)
+![Prediction](img/prediction.png)
 
 
 ### Key
 
 The ```Key``` feature contains financial definitions that are helpful to know.
 
-- ![Key](img/key.png)
+![Key](img/key.png)
 
 The experiment feature locates the results of the experiment. The first experiment compares the Accuracy rate vs Error rate. 
 
@@ -102,9 +102,9 @@ The first experiment compares the Accuracy rate vs Error rate.
 
 Accuracy vs Error rate (Experiment 1)
 
-- ![Accuracy vs Error rate](img/Experiment_1.png)
+![Accuracy vs Error rate](img/Experiment_1.png)
 
 The second experiment tests the model using different hyperparameters (aka different periods).
 
-- ![Accuracy vs Error rate](img/Experiment_2.png)
+![Accuracy vs Error rate](img/Experiment_2.png)
 
