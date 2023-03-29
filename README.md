@@ -1,3 +1,4 @@
+![MIT License badge](https://img.shields.io/github/license/ReadyResearchers/GatorStreet)
 <p align="center">
   <img src="img/GatorStreet_Logo.png" />
 </p>
