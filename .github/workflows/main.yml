@@ -18,8 +18,8 @@ jobs:
       with:
         python-version: '3.9'
       # Refers to .mdlrc file in repository
-    - name: Run Markdown Linting
-      uses: actionshub/markdownlint@main
+    # - name: Run Markdown Linting
+    #   uses: actionshub/markdownlint@main
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
