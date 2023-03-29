@@ -108,23 +108,3 @@ The second experiment tests the model using different hyperparameters (aka diffe
 
 - ![Accuracy vs Error rate](img/Experiment_2.png)
 
-### Related works:
-
-Here are some examples of similar projects that you might find helpful for further exploration:
-
-- Stock Price Prediction Machine Learning Project in Python by DataFlair Training: This tutorial introduces stock price prediction using machine learning techniques in Python.
-
-- Predicting Future Stock Market Trends with Python Machine Learning by Towards Data Science: This article covers the basics of stock price prediction and demonstrates how to implement it using Python and machine learning.
-
-- StockSwingPredictor by Lussierc: This is a Python-based project that uses machine learning techniques to predict the swings in stock prices.
-
-- Portfolio Project: Predicting Stock Prices Using Pandas and Scikit-learn by Dataquest: This portfolio project walks through a machine learning workflow for predicting stock prices using Python libraries like pandas and scikit-learn.
-
-
-## Future Work
-
-The GatorStreet application has significant potential for further improvements and developments. One potential avenue for future work is utilizing different data sets and exploring alternate time-series forecasting models for improved forecast and future predictions. For example, incorporating diversified data could present a more comprehensive outlook of the stock market and uncover new trends not observable in the initial data set. In addition, testing different forecasting models can generate more accurate and precise predictions.
-
-Improving the data visualization of the GatorStreet application could also enhance the user experience. While the current UX evaluation demonstrated high user satisfaction with the application, adding more interactive visualizations and detailed data could make the platform more engaging and user-friendly. Adding charts, graphs, and interactive maps to the platform could help users better understand the data.
-
-Another potential improvement to the GatorStreet application could be the addition of more features. For instance, incorporating social media data or other external factors could enhance the platform's predictive capabilities. In addition, the application could also be upgraded to capture live data during stock market trading hours, allowing users to see real-time changes in market trends.
